@@ -1,0 +1,50 @@
+@import '../sass/_mixins';
+
+.nav-container{
+  position: absolute;
+  width: 100vw;
+  display: inline-block;
+  z-index: 2;
+  .nav-title{
+    padding-left: 50px;
+    padding-top: 30px;
+    @include respond-to(phone){
+      padding-left: 0px;
+      padding-top: 0px;
+    }
+    h4{
+      @include h4();
+      position: relative;
+      display: inline-block;
+      width: 150px;
+      top: 9px;
+      @include respond-to(phone){
+        display: none;
+      }
+    }
+  }
+  .nav-cta{
+    float: right;
+    position: relative;
+    right: 50px;
+    @include respond-to(phone){
+      float: none;
+      right: 0px;
+      width: 150px;
+      position: relative;
+      margin-top: 25px;
+      @include center-horizontally();
+    }
+    a{
+      display: inline-block;
+      @include a();
+      &:nth-child(1){
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.link-rounded-border-no-fill{
+  @include link-rounded-border-no-fill();
+}

@@ -1,0 +1,53 @@
+@import '../sass/mixins';
+@import '../sass/variables';
+
+.newsletter-section-headline{
+  text-align: center;
+  margin-bottom: 50px;
+  h3{
+    @include section-headline-h3();
+  }
+}
+
+.newsletter-container{
+  margin-bottom: $section-margin-bottom;
+  .newsletter-content{
+    p{
+      @include section-subtitle();
+    }
+  }
+  .newsletter-form{
+    width: 430px;
+    position: relative;
+    margin-top: 35px;
+    @include center-horizontally();
+    @include respond-to(phone){
+      width: 315px;
+    }
+    input{
+      margin-right: 15px;
+      padding: 8px;
+      @include input-field();
+      @include respond-to(phone){
+        display: block;
+        width: 300px;
+      }
+      &::placeholder{
+        @include card-description();
+        color: #999999;
+      }
+    }
+    .rounded-cta-color-fill{
+      @include rounded-cta-color-fill();
+      outline: 0;
+      padding: 8px;
+      @include respond-to(phone){
+        width: 315px;
+        margin-top: 10px;
+      }
+      p{
+        @include rounded-cta-color-fill-p();
+      }
+    }
+  }
+}

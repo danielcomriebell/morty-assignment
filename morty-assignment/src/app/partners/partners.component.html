@@ -1,0 +1,23 @@
+<div class="partner-section-headline">
+  <h3>{{headline}}</h3>
+</div>
+
+<div class="partner-container">
+  <div class="partners">
+    <div *ngFor="let partner of partner_content" class="partner">
+      <div class="partner-text-container">
+        <img src="{{partner.img}}" alt="">
+        <div class="partner_image">
+          <img src="{{partner.img_2}}" alt="">
+        </div>
+        <p class="partner-name">{{partner.partner_name}}</p>
+        <p class="partner-description">{{partner.description}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="partner-cta">
+    <button type="button" name="button"><p>See other partners</p></button>
+  </div>
+
+</div>

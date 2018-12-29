@@ -1,0 +1,80 @@
+@import '../sass/_mixins';
+@import '../sass/_variables';
+
+.footer-container{
+  width: 100vw;
+  border-top: 2px solid #FF4E50;
+  height: 224px;
+  margin-bottom: 50px;
+  .footer-content{
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 15px;
+    @include respond-to(phone){
+      width: 100%;
+    }
+    .footer-company-name{
+      @include footer-column();
+      @include respond-to(phone){
+        width: 100%;
+        flex: none;
+      }
+      h1{
+        @include footer-logo();
+        text-transform: uppercase;
+        position: relative;
+        left: 20px;
+        top: 20px;
+        @include respond-to(phone){
+          left: 0px;
+          text-align: center;
+        }
+      }
+    }
+    .footer-company-links{
+      @include footer-column();
+      @include respond-to(phone){
+        width: 50%;
+        flex: none;
+        text-align: center;
+        margin-top: 15px;
+        @include center-horizontally();
+      }
+      h1{
+        @include a();
+        color: #444444;
+        position: relative;
+        margin-top: 9px;
+      }
+      a{
+        @include card-description();
+        text-transform: capitalize;
+        text-decoration: none;
+        line-height: 26px;
+      }
+      .link{
+        @include respond-to(phone){
+          display: inline-block;
+          margin-right: 10px;
+        }
+      }
+    }
+    .footer-company-partner{
+      @include footer-column();
+      @include respond-to(phone){
+        width: 100%;
+        flex: none;
+        text-align: center;
+      }
+      h1{
+        @include a();
+        color: #444444;
+        position: relative;
+        margin-top: 9px;
+      }
+    }
+  }
+}

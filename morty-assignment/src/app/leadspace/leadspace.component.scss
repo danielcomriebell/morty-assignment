@@ -1,0 +1,62 @@
+@import '../sass/_mixins';
+@import '../sass/_variables';
+
+.leadspace-container{
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: $section-margin-bottom;
+  .mobile-title{
+    display: none;
+    @include respond-to(phone){
+      display: block;
+      font-size: 20px !important;
+      margin-bottom: 15px;
+    }
+  }
+  .hero-image{
+    background-image: url("../../assets/Bitmap.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+  .hero-content{
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    @include center-content();
+    @include respond-to(phone){
+      width: 85%;
+    }
+    h1{
+      @include hero-h1();
+      @include respond-to(phone){
+        font-size: 30px;
+        line-height: 37px;
+      }
+    }
+    h3{
+      margin-top: 40px;
+      margin-bottom: 40px;
+      @include hero-h3();
+      @include respond-to(phone){
+        font-size: 18px;
+      }
+    }
+    button{
+      @include rounded-cta-color-fill();
+      height: 40px;
+      width: 240px;
+      p{
+        @include rounded-cta-color-fill-p();
+      }
+    }
+  }
+}
+
+.mask{
+  @include mask();
+  position: relative;
+  top: -100%;
+  opacity: .4;
+}

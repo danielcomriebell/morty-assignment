@@ -1,0 +1,12 @@
+<div class="cards-grid-section-headline">
+  <h3>{{headline}}</h3>
+</div>
+
+<div class="cards-grid-container">
+  <div *ngFor="let card of cards_content" class="card" [ngStyle]="{'background-image':'url(' + card.img + ')'}">
+    <div class="card-text-container">
+      <p class="card-headline">{{card.title}}</p>
+    </div>
+    <div class="mask"></div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+@import '../sass/_mixins';
+@import '../sass/_variables';
+
+.cards-grid-section-headline{
+  text-align: center;
+  margin-bottom: 50px;
+  h3{
+    @include section-headline-h3();
+  }
+}
+
+.cards-grid-container{
+  margin-bottom: $section-margin-bottom;
+  display: grid;
+  width: 85%;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  @include center-horizontally();
+  @include respond-to(phone){
+    display: block;
+  }
+  .card{
+    height: 310px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include respond-to(phone){
+      height: 150px;
+    }
+    &:nth-child(5){
+      grid-column: 2 / span 2;
+    }
+    &:nth-child(6){
+      grid-column: 1 / span 2;
+    }
+    .card-text-container{
+      position: relative;
+      text-align: center;
+      z-index: 2;
+      @include center-vertically();
+      p{
+        @include section-headline-h3();
+        color: #FFF;
+      }
+    }
+  }
+}
+
+.mask{
+  @include mask();
+  margin-top: -27px;
+  border-radius: 4px;
+}

@@ -1,0 +1,212 @@
+$break-phone: 767px;
+$break-phone-landscape: 767px;
+$break-tablet: 1022px;
+$break-laptop-small: 1280px;
+$break-laptop-medium: 1440px;
+$break-laptop-large: 1920px;
+$break-desktop: 50000px;
+
+@mixin respond-to($media) {
+  @if $media == desktop {
+    @media only screen and (min-width: $break-laptop-large + 1) and (max-width: $break-desktop) { @content; }
+  }
+  @else if $media == laptop-large {
+    @media only screen and (min-width: $break-laptop-medium + 1) and (max-width: $break-laptop-large) { @content; }
+  }
+  @else if $media == laptop-medium {
+    @media only screen and (min-width: $break-laptop-small + 1) and (max-width: $break-laptop-medium) { @content; }
+  }
+  @else if $media == laptop-small {
+    @media only screen and (min-width: $break-tablet + 1) and (max-width: $break-laptop-small) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $break-phone + 1) and (max-width: $break-tablet) { @content; }
+  }
+  @else if $media == phone {
+    @media only screen and (min-width: 0px) and (max-width: $break-phone) { @content; }
+  }
+}
+
+@mixin hero-h1(){
+  font-size: 52px;
+  font-weight: bold;
+  font-family: 'Montserrat';
+  text-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+  line-height: 63px;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+@mixin hero-h3{
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 24px;
+  text-shadow: 0 2px 10px 0 #000000;
+  color: #F7F3F2;
+}
+
+@mixin h2(){
+}
+
+@mixin h3(){
+}
+
+@mixin section-headline-h3(){
+  font-family: 'Montserrat';
+  height: 26px;
+  font-size: 22px;
+  line-height: 27px;
+  text-align: center;
+  font-weight: bold;
+  color: #444444;
+}
+
+@mixin a(){
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 36px;
+  color: #FFF;
+}
+
+@mixin h4(){
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  color: #FFF;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+@mixin title-p(){
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+}
+
+@mixin center-content(){
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin center-horizontally(){
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin center-vertically(){
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin rounded-cta-color-fill(){
+  -webkit-appearance: none;
+  border-radius: 40px;
+  background-color: #FF4E50;
+  border: none;
+}
+
+@mixin rounded-cta-color-fill-p(){
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+  color: #FFF;
+  padding: 4px;
+}
+
+@mixin link-rounded-border-no-fill(){
+  height: 36px;
+  width: 90px;
+  border: 2px solid #FFF;
+  border-radius: 40px;
+  text-align: center;
+}
+
+@mixin step-p(){
+  color: #FFF;
+  font-family: 'Montserrat';
+  font-size: 10px;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+
+@mixin card-headline(){
+  color: #FFF;
+  font-family: 'Montserrat';
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+@mixin card-description(){
+  color: #E3E3E3;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+@mixin flex-row(){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+@mixin partner-cta(){
+  -webkit-appearance: none;
+  height: 40px;
+  width: 180px;
+  border: 2px solid #FF4E50;
+  border-radius: 40px;
+  background-color: #FFFFFF;
+}
+
+@mixin section-subtitle(){
+  color: #666666;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 14px;
+  text-align: center;
+}
+
+@mixin input-field(){
+  width: 240px;
+  height: 20px;
+	border: 1px solid #D4D4D4;
+  outline: 0;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.5), 0 1px 2px 0 rgba(0,0,0,0.07);
+  background-color: #FFFFFF;
+}
+
+@mixin footer-logo(){
+  font-family: 'Montserrat';
+  color: #FF4E50;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@mixin footer-column(){
+  position: relative;
+  flex: 1;
+  width: 33%;
+}
+
+@mixin mask(){
+  background-color: black;
+  opacity: .2;
+  height: 100%;
+  width: 100%;
+}

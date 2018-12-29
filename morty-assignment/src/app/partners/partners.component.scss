@@ -1,0 +1,99 @@
+@import '../sass/_mixins';
+@import '../sass/_variables';
+
+.partner-section-headline{
+  text-align: center;
+  margin-bottom: 50px;
+  h3{
+    @include section-headline-h3();
+  }
+}
+
+.partner-container{
+  margin-bottom: $section-margin-bottom;
+  .partners{
+    @include flex-row();
+    width: 90%;
+    position: relative;
+    @include center-horizontally();
+    @include respond-to(tablet){
+      width: 70%;
+    }
+    @include respond-to(phone){
+      width: 90%;
+    }
+    .partner-text-container{
+      .partner_image{
+        background-color: black;
+        width: 35px;
+        height: 35px;
+        border-radius: 30px;
+        position: relative;
+        left: 63%;
+        top: -41px;
+        @include respond-to(tablet){
+          left: 61%;
+        }
+        @include respond-to(phone){
+          left: 57.5%;
+        }
+        @include respond-to(laptop-medium){
+          left: 61%;
+        }
+        @include respond-to(laptop-large){
+          left: 59%;
+        }
+        img{
+          padding-top: 9px;
+        }
+      }
+    }
+  }
+  .partner{
+    width: 20%;
+    height: 275px;
+    max-width: 350px;
+    @include respond-to(tablet){
+      width: 40%;
+    }
+    @include respond-to(phone){
+      width: 100%;
+    }
+    img{
+      position: relative;
+      @include center-horizontally();
+    }
+  }
+
+  .partner-cta{
+    text-align: center;
+    margin-top: 25px;
+    button{
+      @include partner-cta();
+      outline: 0;
+      p{
+        @include title-p();
+        color: #FF4E50;
+      }
+    }
+  }
+}
+
+.partner-name{
+  text-align: center;
+  @include title-p();
+	color: #444444;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.partner-description{
+  text-align: center;
+  @include card-description();
+  color: #666666;
+}
+
+
+body > app-root > app-partners > div.partner-container > div.partners > div:nth-child(1) > div > div{
+  background-color: green !important;
+}

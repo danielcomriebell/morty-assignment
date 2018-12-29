@@ -1,0 +1,16 @@
+<div class="footer-container">
+  <div class="footer-content">
+    <div class="footer-company-name">
+      <h1>DreamShare</h1>
+    </div>
+    <div class="footer-company-links">
+      <h1>Company</h1>
+      <div *ngFor="let link of links" class="link">
+        <a [routerLink]="['/' + link.url]">{{link.title}}</a>
+      </div>
+    </div>
+    <div class="footer-company-partner">
+      <h1>Partners</h1>
+    </div>
+  </div>
+</div>
