@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartnersComponent implements OnInit {
   headline:String="Meet a partner for your best";
-  partner_content:Array= [
+  partner_content:Array<any>= [
     {
       img: '../../assets/person3.png',
       img_2: '../../assets/music2.png',

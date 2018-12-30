@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsGridComponent implements OnInit {
   headline:string="Discover Holiday Activity";
-  cards_content:Array= [
+  cards_content:Array<any>= [
     {
       title: 'Sports and Activities',
       img: '../../assets/running.png',

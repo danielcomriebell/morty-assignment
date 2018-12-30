@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsComponent implements OnInit {
   headline:string="How Dreamshare";
-  cards_content:Array= [
+  cards_content:Array<any>= [
     {
       img: '../../assets/laptop.png',
       step: 'Step 1',

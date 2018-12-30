@@ -43,6 +43,9 @@
         @include respond-to(laptop-large){
           left: 59%;
         }
+        @include respond-to(desktop){
+          left: 57.5%;
+        }
         img{
           padding-top: 9px;
         }
