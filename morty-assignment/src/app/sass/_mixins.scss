@@ -210,3 +210,10 @@ $break-desktop: 50000px;
   height: 100%;
   width: 100%;
 }
+
+@mixin three-col-grid{
+  display: grid;
+  width: 85%;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
