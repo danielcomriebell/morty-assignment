@@ -47,6 +47,7 @@
       @include rounded-cta-color-fill();
       height: 40px;
       width: 240px;
+      outline: 0;
       p{
         @include rounded-cta-color-fill-p();
       }
