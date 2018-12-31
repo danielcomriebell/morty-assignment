@@ -49,13 +49,6 @@
 .card-headline{
   @include card-headline();
 }
-
 .card-description{
   @include card-description();
-}
-
-.mask{
-  @include mask();
-  margin-top: -27px;
-  border-radius: 4px;
 }
