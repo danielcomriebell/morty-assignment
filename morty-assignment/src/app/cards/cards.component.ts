@@ -17,8 +17,8 @@ export class CardsComponent implements OnInit {
     {
       img: '../../assets/driving.png',
       step: 'Step 2',
-      title: 'Morbi velit risus',
-      description: 'Nulla venenatis tempor dui in molestie. Nulla quis dictum purus sit amet porttitor est'
+      title: 'Sed leo enim, condimentum',
+      description: 'Quisque liero libero, dictum non turpis in, lectus semper lorem. Donec rhoncus a leo sit amet facilisis'
     },
     {
       img: '../../assets/beach.png',
